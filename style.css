@@ -1,0 +1,174 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:poppins,sans-serif
+}
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    padding:0 10px;
+    background: #F54462;
+    user-select: none;
+}
+::selection{
+    color:#fff;
+    background:#F09898;
+}
+.wrapper{
+    width:605px;
+    background:#fff;
+    border-radius:15px;
+    padding:30px 30px 25px;
+    box-shadow:0 12px 35px rgba(0,0,0,.1)
+}
+header,.content :where(i,p,span){
+    color:#102137
+}
+.wrapper header{
+    font-size:35px;
+    font-weight:600;
+    text-align:center
+}
+.wrapper .content{
+    margin:35px 0
+}
+.content .quote-area{
+    display:flex;
+}
+.quote-area i{
+    font-size:15px
+}
+.quote-area i:first-child{
+    margin:3px 0 0 0
+}
+.quote-area i:last-child{
+    display:flex;
+    margin:0 0 3px 10px;
+    align-items:flex-end;
+}
+.quote-area .quote{
+    font-size:22px;
+    text-align:center;
+}
+.content .author{
+    display:flex;
+    font-size:18px;
+    margin-top:20px;
+    font-style:italic;
+    justify-content:flex-end
+}
+.author span:first-child{
+    margin:-6px 5px 0 0;
+    font-family:monospace;
+}
+.buttons .features{
+    display:flex;
+    margin-top:20px;
+    align-items:center;
+    justify-content:space-between;
+}
+.features ul{
+    display:flex
+}
+.features ul li{
+    margin:0 5px;
+    height:47px;
+    width:47px;
+    display:flex;
+    cursor:pointer;
+    color:#F09898;
+    list-style:none;
+    border-radius:50%;
+    align-items:center;
+    justify-content:center;
+    border:2px solid #F09898;
+    transition:all .3s ease
+}
+.features ul li:first-child{
+    margin-left:0
+}
+ul li:is(:hover,.active){
+    color:#fff;
+    background:#F09898
+}
+ul .speech.active{
+    pointer-events:none
+}
+.buttons button{
+    border:none;
+    color:#fff;
+    outline:none;
+    font-size:16px;
+    cursor:pointer;
+    padding:13px 22px;
+    border-radius:15px;
+    background:#F54462
+}
+.buttons button:hover{
+    background: #F09898;
+}
+.buttons button.loading{
+    opacity:.7;
+    pointer-events:none
+}
+@media(max-width:728px){
+    .wrapper{
+        padding:25px 25px 20px;
+        margin: 15px 15px 15px 15px;    
+    }
+    .wrapper header{
+        font-size:29px
+    }
+    .quote-area .quote{
+        font-size:20px;
+        word-break:keep-all
+    }
+    .content .author{
+        font-size:16px
+    }
+    .quote-area i{
+        font-size:12px
+    }
+    .features ul li{
+        margin:0 3px;
+        height:45px;
+        width:45px
+    }
+    .buttons button{
+        font-size:15px;
+        padding:12px 20px
+    }
+}
+.download-fc{
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    z-index: 99999;
+  }
+  .download-fc a{
+    background: none;
+    padding: 13px 22px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+  }
+  .download-fc a:hover{
+      color: #5372F0;
+      background: #fff;
+  }
+  @media screen and (max-width: 728px){
+      .download-fc{
+          left: 20px;
+      }
+      .download-fc a{
+          font-size: 13px;
+          padding: 9px 15px;
+      }
+  }
